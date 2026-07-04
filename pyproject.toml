@@ -5,10 +5,20 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "py-utils-starter"
 version = "0.1.0"
-description = "A tiny collection of Python string utility functions"
+description = "A tiny collection of Python string and image utility functions"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
+dependencies = [
+    "numpy",
+    "pillow",
+]
+
+[project.optional-dependencies]
+depth = [
+    "torch",
+    "transformers",
+]
 
 [tool.setuptools.packages.find]
 include = ["pyutils*"]
